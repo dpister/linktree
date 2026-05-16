@@ -52,7 +52,7 @@ const Menu = ({
         )}
         {linkItem.addInfo && (
           <CopyLinkButton
-            contentType={linkItem.addInfo.type}
+            contentType={linkItem.addInfo.displayedType}
             copyContent={linkItem.addInfo.copyContent}
             img="src/assets/copy.png"
             successImg="src/assets/checkmark.png"

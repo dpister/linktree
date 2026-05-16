@@ -11,8 +11,8 @@ const Content = ({ linkItem }: { linkItem: LinkItem }) => {
       </div>
       <div className="mx-16">
         <div className="text-white text-center text-lg wrap-break-word">{linkItem.name}</div>
-        {linkItem.addInfo?.displayText && (
-          <div className="text-white text-center wrap-break-word">{linkItem.addInfo?.displayText}</div>
+        {linkItem.addInfo?.displayedText && (
+          <div className="text-white text-center wrap-break-word">{linkItem.addInfo?.displayedText}</div>
         )}
       </div>
     </>

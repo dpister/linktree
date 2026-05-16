@@ -1,75 +1,41 @@
-# React + TypeScript + Vite
+# Linktree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, customizable Linktree-style landing page built with HTML, Typescript, React and Tailwind CSS. Share your social media profiles, gamer tags and other important links, so everybody can find them and copy them with a single click of a button.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Screenshot](./sample-screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Responsive design for mobile and desktop
+- Search bar to filter your links
+- Easy customization
+- Fast and lightweight
+- Icons for social media and games
+- No additional dependencies required
+- Context menu to copy link or username with a single click
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+   `git clone https://github.com/dpister/linktree.git`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Install [Node JS](https://nodejs.org/en)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. Run `npm run dev` and open [localhost:5173](http://localhost:5173/) in your browser
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+4. Rename `sampleContents.tsx` to `contents.tsx`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5. Customize:
+   - Add your own links
+   - Update your name and bio
+   - Replace `src/assets/profile-picture.png` with your profile picture
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is licensed under the MIT License.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Author
+
+Created by Daniel Pister.
