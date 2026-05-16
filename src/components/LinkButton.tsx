@@ -41,15 +41,15 @@ const LinkButton = ({ linkItem }: { linkItem: LinkItem }) => {
   const hasLink = Boolean(linkItem.link)
   return (
     <div className="relative">
-      {menuOpened && <Menu linkItem={linkItem} setOpened={setMenuOpened} />}
       <div
         className={`${hasLink ? "hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
-      >
+        >
         <LinkOrDiv linkItem={linkItem} />
         <div className="absolute right-1">
           <OpenMenuButton setClicked={setMenuOpened} />
         </div>
       </div>
+      {menuOpened && <Menu linkItem={linkItem} setOpened={setMenuOpened} />}
     </div>
   )
 }
