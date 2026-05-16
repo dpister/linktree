@@ -6,7 +6,12 @@ const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<bo
     setClicked(true)
   }
   return (
-    <div tabIndex={0} onClick={handleClick} className="relative p-2 rounded-full m-0.5 hover:bg-zinc-400">
+    <div
+      tabIndex={0}
+      onClick={handleClick}
+      role="button"
+      className="cursor-pointer relative p-2 rounded-full m-0.5 hover:bg-zinc-400"
+    >
       <img className="size-6" src={menuImg} alt="menu.png" />
     </div>
   )
