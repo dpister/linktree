@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react"
 import type { LinkItem } from "../App"
 import CopyLinkButton from "./CopyLinkButton"
-import linkImg from "src/assets/link.png"
-import successImg from "src/assets/checkmark.png"
-import copyImg from "src/assets/copy.png"
+import linkImg from "../assets/link.png"
+import successImg from "../assets/checkmark.png"
+import copyImg from "../assets/copy.png"
 
 const Menu = ({
   linkItem,

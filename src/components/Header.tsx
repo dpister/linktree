@@ -1,5 +1,5 @@
 import { headerName, headerText } from "../contents"
-import profilePic from "src/assets/profile-pic.png"
+import profilePic from "../assets/profile-pic.png"
 
 const Header = () => {
   return (

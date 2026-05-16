@@ -1,5 +1,5 @@
 import { type Dispatch, type SetStateAction } from "react"
-import menuImg from "src/assets/menu.png"
+import menuImg from "../assets/menu.png"
 
 const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<boolean>> }) => {
   const handleClick = () => {
