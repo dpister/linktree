@@ -3,8 +3,9 @@
 A lightweight, customizable Linktree-style landing page built with HTML, Typescript, React and Tailwind CSS. Share your social media profiles, gamer tags and other important links, so everybody can find them and copy them with a single click of a button.
 
 ## Preview
-
-![Screenshot](./sample-screenshot.png)
+<div align="center">
+   <img src="./sample-screenshot.png" width="60%" height="auto" style="">
+</div>
 
 ## Features
 
