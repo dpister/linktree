@@ -10,9 +10,9 @@ const Content = ({ linkItem }: { linkItem: LinkItem }) => {
         <img src={linkItem.img} alt={linkItem.img} className="rounded-lg" />
       </div>
       <div className="mx-16">
-        <div className="text-white text-center text-lg wrap-break-word">{linkItem.name}</div>
+        <div className="text-white text-center text-md wrap-break-word">{linkItem.name}</div>
         {linkItem.addInfo?.displayedText && (
-          <div className="text-white text-center wrap-break-word">{linkItem.addInfo?.displayedText}</div>
+          <div className="text-white text-center text-sm wrap-break-word text">{linkItem.addInfo?.displayedText}</div>
         )}
       </div>
     </>
@@ -42,8 +42,8 @@ const LinkButton = ({ linkItem }: { linkItem: LinkItem }) => {
   return (
     <div className="relative">
       <div
-        className={`${hasLink ? "hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
-        >
+        className={`${hasLink ? "active:bg-zinc-600 hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
+      >
         <LinkOrDiv linkItem={linkItem} />
         <div className="absolute right-1">
           <OpenMenuButton setClicked={setMenuOpened} />

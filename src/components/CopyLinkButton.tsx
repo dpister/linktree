@@ -47,7 +47,7 @@ const CopyLinkButton = ({
       <img
         tabIndex={0}
         role="button"
-        className="size-10 mx-auto m-1 p-2 bg-zinc-500 hover:bg-zinc-600 rounded-xl cursor-pointer"
+        className="size-10 mx-auto m-1 p-2 bg-zinc-500 active:bg-zinc-600 hover:bg-zinc-600 rounded-xl cursor-pointer"
         src={currentImg}
         alt={currentImg}
       />
