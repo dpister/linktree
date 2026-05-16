@@ -1,4 +1,5 @@
 import { type Dispatch, type SetStateAction } from "react"
+import menuImg from "src/assets/menu.png"
 
 const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<boolean>> }) => {
   const handleClick = () => {
@@ -6,7 +7,7 @@ const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<bo
   }
   return (
     <div tabIndex={0} onClick={handleClick} className="relative p-2 rounded-full m-0.5 hover:bg-zinc-400">
-      <img className="size-6" src="src/assets/menu.png" alt="menu.png" />
+      <img className="size-6" src={menuImg} alt="menu.png" />
     </div>
   )
 }

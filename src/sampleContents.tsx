@@ -1,15 +1,17 @@
 import type { LinkItem } from "./App.tsx"
+import linkImg from "./src/assets/link.png"
+import copyImg from "./src/assets/copy.png"
 
 export const linkItems: LinkItem[] = [
   {
     name: "Link1",
-    img: "src/assets/link.png",
+    img: linkImg,
     link: "https://sampleLinkdotcom",
     type: "socials",
   },
   {
     name: "Profile2",
-    img: "src/assets/copy.png",
+    img: copyImg,
     link: "https://sampleLinkdotcom",
     addInfo: {
       // Show your username below the name of the linked website
@@ -21,7 +23,7 @@ export const linkItems: LinkItem[] = [
   },
   {
     name: "Link3",
-    img: "src/assets/link.png",
+    img: linkImg,
     // Links can be omitted if there is no website to link to
     addInfo: {
       displayedText: "EU West: username#1234",

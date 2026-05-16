@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react"
 import type { LinkItem } from "../App"
 import CopyLinkButton from "./CopyLinkButton"
+import linkImg from "src/assets/link.png"
+import successImg from "src/assets/checkmark.png"
+import copyImg from "src/assets/copy.png"
 
 const Menu = ({
   linkItem,
@@ -43,19 +46,14 @@ const Menu = ({
       <h3 className="text-white">Copy</h3>
       <div className="flex justify-between">
         {linkItem.link && (
-          <CopyLinkButton
-            contentType="URL"
-            copyContent={linkItem.link}
-            img="src/assets/link.png"
-            successImg="src/assets/checkmark.png"
-          />
+          <CopyLinkButton contentType="URL" copyContent={linkItem.link} img={linkImg} successImg={successImg} />
         )}
         {linkItem.addInfo && (
           <CopyLinkButton
             contentType={linkItem.addInfo.displayedType}
             copyContent={linkItem.addInfo.copyContent}
-            img="src/assets/copy.png"
-            successImg="src/assets/checkmark.png"
+            img={copyImg}
+            successImg={successImg}
           />
         )}
       </div>
