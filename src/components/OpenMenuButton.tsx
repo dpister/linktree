@@ -2,6 +2,11 @@ import { type Dispatch, type SetStateAction } from "react"
 import menuImg from "../assets/menu.png"
 
 const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<boolean>> }) => {
+  const handleKeydown = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter") {
+      handleClick()
+    }
+  }
   const handleClick = () => {
     setClicked(true)
   }
@@ -9,6 +14,7 @@ const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<bo
     <div
       tabIndex={0}
       onClick={handleClick}
+      onKeyDown={handleKeydown}
       role="button"
       className="cursor-pointer relative p-2 rounded-full m-0.5 hover:bg-zinc-400"
     >

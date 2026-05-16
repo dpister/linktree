@@ -15,6 +15,12 @@ const CopyLinkButton = ({
   const [currentImg, setCurrentImg] = useState(img)
   const [currentTimeout, setCurrentTimeout] = useState(NO_TIMEOUT)
 
+  async function handleKeydown(event: React.KeyboardEvent) {
+    if (event.key === "Enter") {
+      await handleClick()
+    }
+  }
+
   async function handleClick() {
     try {
       await navigator.clipboard.writeText(copyContent)
@@ -37,7 +43,7 @@ const CopyLinkButton = ({
   }
 
   return (
-    <div className="mx-5 my-1" onClick={handleClick}>
+    <div className="mx-5 my-1" onClick={handleClick} onKeyDown={handleKeydown}>
       <img
         tabIndex={0}
         role="button"

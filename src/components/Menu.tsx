@@ -1,17 +1,11 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, type Dispatch, type SetStateAction } from "react"
 import type { LinkItem } from "../App"
 import CopyLinkButton from "./CopyLinkButton"
 import linkImg from "../assets/link.png"
 import successImg from "../assets/checkmark.png"
 import copyImg from "../assets/copy.png"
 
-const Menu = ({
-  linkItem,
-  setOpened,
-}: {
-  linkItem: LinkItem
-  setOpened: React.Dispatch<React.SetStateAction<boolean>>
-}) => {
+const Menu = ({ linkItem, setOpened }: { linkItem: LinkItem; setOpened: Dispatch<SetStateAction<boolean>> }) => {
   const handleOutsideClick = () => {
     setOpened(false)
   }
@@ -20,6 +14,11 @@ const Menu = ({
     const ref = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
+      const handleKeydown = (event: KeyboardEvent) => {
+        if (event.key === "Escape") {
+          handleOutsideClick()
+        }
+      }
       const handleClick = (event: MouseEvent) => {
         if (ref.current && event.target instanceof Node && !ref.current.contains(event.target)) {
           callback()
@@ -27,8 +26,10 @@ const Menu = ({
       }
 
       document.addEventListener("click", handleClick, true)
+      document.addEventListener("keydown", handleKeydown, true)
 
       return () => {
+        document.removeEventListener("keydown", handleKeydown, true)
         document.removeEventListener("click", handleClick, true)
       }
     }, [ref])
