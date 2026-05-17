@@ -42,7 +42,7 @@ const LinkButton = ({ linkItem }: { linkItem: LinkItem }) => {
   return (
     <div className="relative">
       <div
-        className={`${hasLink ? "active:bg-zinc-600 hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
+        className={`${hasLink ? "hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
       >
         <LinkOrDiv linkItem={linkItem} />
         <div className="absolute right-1">
