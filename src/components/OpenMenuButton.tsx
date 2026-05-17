@@ -16,7 +16,7 @@ const OpenMenuButton = ({ setClicked }: { setClicked: Dispatch<SetStateAction<bo
       onClick={handleClick}
       onKeyDown={handleKeydown}
       role="button"
-      className="cursor-pointer relative p-2 rounded-full m-0.5 active:bg-zinc-400 hover:bg-zinc-400"
+      className="cursor-pointer z-20 p-2 rounded-full active:bg-zinc-400 hover:bg-zinc-400"
     >
       <img className="size-6" src={menuImg} alt="menu.png" />
     </div>

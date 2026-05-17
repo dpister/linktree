@@ -23,11 +23,11 @@ const LinkOrDiv = ({ linkItem }: { linkItem: LinkItem }) => {
   return (
     <>
       {linkItem.link ? (
-        <a href={linkItem.link} target="_blank">
-          <Content linkItem={linkItem} />
+        <a href={linkItem.link} target="_blank" className="flex flex-col justify-center align-center min-h-14 py-1 active:bg-zinc-600 hover:bg-zinc-600 rounded-full">
+          <Content linkItem={linkItem} />   
         </a>
       ) : (
-        <div tabIndex={0}>
+        <div tabIndex={0} className="flex flex-col justify-center align-center min-h-14 py-1 rounded-full">
           <Content linkItem={linkItem} />
         </div>
       )}
@@ -38,14 +38,11 @@ const LinkOrDiv = ({ linkItem }: { linkItem: LinkItem }) => {
 const LinkButton = ({ linkItem }: { linkItem: LinkItem }) => {
   const [menuOpened, setMenuOpened] = useState(false)
 
-  const hasLink = Boolean(linkItem.link)
   return (
     <div className="relative">
-      <div
-        className={`${hasLink ? "active:bg-zinc-600 hover:bg-zinc-600" : ""} relative flex flex-col justify-center align-center my-3 min-h-14 py-1 bg-zinc-500 rounded-full border-zinc-600 border`}
-      >
+      <div className="relative bg-zinc-500 rounded-full my-3 border-zinc-600 border">
         <LinkOrDiv linkItem={linkItem} />
-        <div className="absolute right-1">
+        <div className="absolute bottom-1/2 translate-y-1/2 right-2">
           <OpenMenuButton setClicked={setMenuOpened} />
         </div>
       </div>
